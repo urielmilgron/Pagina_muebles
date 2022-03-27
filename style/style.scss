@@ -1,0 +1,69 @@
+//mixins
+@mixin display($display, $justifyContent) {
+  display: $display;
+  justify-content: $justifyContent;
+}
+
+//map
+$tamanosDifusos: (
+  header: 1200px,
+  tamanosGenerales: 20px,
+);
+
+//items globales
+.nav-item,
+.iconos {
+  margin-left: map-get($tamanosDifusos, tamanosGenerales);
+  margin-right: map-get($tamanosDifusos, tamanosGenerales);
+  padding-left: 25px;
+  padding-right: 25px;
+}
+header {
+  background-color: rgb(87, 86, 86);
+  @include display(flex, center);
+  .navHeader {
+    width: map-get($tamanosDifusos, header);
+  }
+}
+#main {
+  background-image: url("../assets/background.jpg");
+  @include display(flex, center);
+  align-items: center;
+  .mainCentrado {
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 95%;
+    text-align: center;
+    .divCategorias {
+      .categorias {
+        margin-top: map-get($tamanosDifusos, tamanosGenerales);
+        color: rgb(218, 218, 218);
+      }
+      h3,
+      p {
+        color: aliceblue;
+      }
+    }
+    .tarjeta{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include display(flex,center );
+    }
+  }
+}
+footer {
+  background-color: rgb(87, 86, 86);
+  @include display(flex, center);
+  .divFooter {
+    width: 95%;
+    @include display(flex, center);
+    flex-direction: column;
+    .horarios,
+    .contacto,
+    .telefono {
+      @include display(flex, center);
+      color: rgb(180, 180, 180);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
