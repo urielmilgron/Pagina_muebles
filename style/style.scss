@@ -34,6 +34,8 @@ header {
     width: 95%;
     text-align: center;
     .divCategorias {
+      @include display(flex,center);
+      flex-direction: column;
       .categorias {
         margin-top: map-get($tamanosDifusos, tamanosGenerales);
         color: rgb(218, 218, 218);
@@ -42,12 +44,20 @@ header {
       p {
         color: aliceblue;
       }
+      .divCards{
+        .card{
+          @include display(flex,center );
+          flex-direction: column;
+        }
+      }
     }
+    a{
     .tarjeta{
         margin-top: 10px;
         margin-bottom: 10px;
         @include display(flex,center );
     }
+  }
   }
 }
 footer {

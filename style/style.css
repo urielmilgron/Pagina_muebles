@@ -39,6 +39,19 @@ header .navHeader {
   text-align: center;
 }
 
+#main .mainCentrado .divCategorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #main .mainCentrado .divCategorias .categorias {
   margin-top: 20px;
   color: #dadada;
@@ -49,7 +62,20 @@ header .navHeader {
   color: aliceblue;
 }
 
-#main .mainCentrado .tarjeta {
+#main .mainCentrado .divCategorias .divCards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main .mainCentrado a .tarjeta {
   margin-top: 10px;
   margin-bottom: 10px;
   display: -webkit-box;
