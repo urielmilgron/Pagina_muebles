@@ -62,6 +62,22 @@ header .navHeader {
   color: aliceblue;
 }
 
+#main .mainCentrado .divCategorias .divCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #main .mainCentrado .divCategorias .divCards .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,6 +89,48 @@ header .navHeader {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#main .mainCentrado .divCategorias .divCards .divRedes {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#main .mainCentrado .divCategorias .divCards .divRedes a .fb {
+  width: 55px;
+}
+
+#main .mainCentrado .divCategorias .divCards .divRedes a img {
+  width: 60px;
+}
+
+#main .mainCentrado .divCategorias .divCards .formulario {
+  padding-top: 20px;
+  background-color: rgba(153, 155, 155, 0.411);
+  border-radius: 1.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+#main .mainCentrado .divCategorias .divCards .iframe iframe {
+  width: 95%;
+  height: 300px;
 }
 
 #main .mainCentrado a .tarjeta {
@@ -87,20 +145,37 @@ header .navHeader {
 }
 
 footer {
-  background-color: #575656;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #575656;
+}
+
+footer .footerCentrado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 2.5%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 95%;
+  background-color: rgba(155, 155, 155, 0.171);
 }
 
-footer .divFooter {
-  width: 95%;
+footer .footerCentrado .spanContacto, footer .footerCentrado .spanDatos {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -108,19 +183,45 @@ footer .divFooter {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-footer .divFooter .horarios,
-footer .divFooter .contacto,
-footer .divFooter .telefono {
+footer .divRedes {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .divRedes .fb, footer .divRedes .insta, footer .divRedes .twitter {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #b4b4b4;
-  margin-top: 10px;
-  margin-bottom: 10px;
+}
+
+footer .divRedes .fb a img, footer .divRedes .insta a img, footer .divRedes .twitter a img {
+  width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  #main .mainCentrado {
+    width: 90%;
+  }
+  #main .mainCentrado .divCategorias .tarjeta {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

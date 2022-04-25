@@ -34,7 +34,7 @@ header {
     width: 95%;
     text-align: center;
     .divCategorias {
-      @include display(flex,center);
+      @include display(flex, center);
       flex-direction: column;
       .categorias {
         margin-top: map-get($tamanosDifusos, tamanosGenerales);
@@ -44,36 +44,122 @@ header {
       p {
         color: aliceblue;
       }
-      .divCards{
-        .card{
-          @include display(flex,center );
+      .divCards {
+        @include display(flex, center);
+        flex-direction: column;
+        align-items: center;
+        .card {
+          @include display(flex, center);
           flex-direction: column;
+        }
+        .divRedes {
+          width: 90%;
+          margin-top: map-get($tamanosDifusos, tamanosGenerales);
+          margin-bottom: map-get($tamanosDifusos, tamanosGenerales);
+          @include display(flex, space-evenly);
+          a {
+            .fb {
+              width: 55px;
+            }
+            img {
+              width: 60px;
+            }
+          }
+        }
+        .formulario {
+          padding-top: 20px;
+          background-color: rgba(153, 155, 155, 0.411);
+          border-radius: 1.5%;
+          @include display(flex, center);
+          flex-direction: column;
+          width: 90%;
+        }
+        .iframe {
+          iframe {
+            width: 95%;
+            height: 300px;
+          }
         }
       }
     }
-    a{
-    .tarjeta{
+    a {
+      .tarjeta {
         margin-top: 10px;
         margin-bottom: 10px;
-        @include display(flex,center );
+        @include display(flex, center);
+      }
     }
   }
+}
+// footer {
+//   background-color: rgb(87, 86, 86);
+//   @include display(flex, center);
+//   .divFooter {
+//     width: 95%;
+//     @include display(flex, center);
+//     flex-direction: column;
+//     .horarios,
+//     .contacto,
+//     .telefono {
+//       @include display(flex, center);
+//       color: rgb(180, 180, 180);
+//       margin-top: 10px;
+//       margin-bottom: 10px;
+//     }
+//   }
+// }
+footer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(87, 86, 86);
+.footerCentrado{
+  display: flex;
+  border-radius: 2.5%;
+  justify-content: center;
+  width: 95%;
+  background-color:rgba(155, 155, 155, 0.171) ;
+  .spanContacto, .spanDatos{
+
+
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+}
+.divRedes{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+.fb, .insta, .twitter{
+  padding-top: 10px;
+  padding-bottom: 10px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+  a{
+    img{
+      width: 50px;
+    }
   }
 }
-footer {
-  background-color: rgb(87, 86, 86);
-  @include display(flex, center);
-  .divFooter {
-    width: 95%;
-    @include display(flex, center);
-    flex-direction: column;
-    .horarios,
-    .contacto,
-    .telefono {
-      @include display(flex, center);
-      color: rgb(180, 180, 180);
-      margin-top: 10px;
-      margin-bottom: 10px;
+}
+}
+//Media query ipad
+@media screen and(min-width: 768px){
+  #main{
+    .mainCentrado{
+      width: 90%;
+      .divCategorias{
+        .tarjeta{
+          margin-top: 4rem;
+          margin-bottom: 5rem;
+        }
+      }
     }
   }
 }
